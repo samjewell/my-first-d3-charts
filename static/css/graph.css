@@ -1,0 +1,54 @@
+body {
+  font-family: Sans-Serif;
+}
+
+.container {
+  min-width: 749px;
+  min-height: 329px;
+  background: #ddd;
+  margin: 5px;
+}
+
+svg {
+  background: #eeb;
+}
+
+path {
+  fill: none;
+  stroke: black;
+}
+
+
+/* from https://bl.ocks.org/mbostock/1134768 */
+
+.axis text {
+  font: 14px sans-serif;
+}
+
+.axis line,
+.axis path {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.axis--x path {
+  display: none;
+}
+
+.tick line {
+  stroke: none;
+}
+
+.nav {
+  display: flex;
+}
+
+.btn {
+  display: flex;
+  cursor: pointer;
+  font-family: Arial;
+  font-size: 17px;
+  padding: 16px 31px;
+  margin-right: 10px;
+}
