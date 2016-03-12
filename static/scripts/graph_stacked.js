@@ -39,7 +39,7 @@ function plotGraph(timeStep) {
     weekly: '%d/%m'
   }[timeStep];
 
-  var svg = d3.select("#advanced-user-interactions").append("svg")
+  var svg = d3.select("#advanced-user-interactions-" + timeStep).append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
@@ -109,16 +109,21 @@ function plotGraph(timeStep) {
   }
 }
 
+
+$('#advanced-user-interactions-weekly').hide();
+
+plotGraph('daily');
+plotGraph('weekly');
+
 // TODO (Sam) - don't delete and create all brand new elements
 // Instead use d3 to delete some and update others
 $('#daily-graph').click(function() {
-  $('#advanced-user-interactions>svg').remove();
-  plotGraph('daily');
+  $('#advanced-user-interactions-daily').show();
+  $('#advanced-user-interactions-weekly').hide();
 });
 
 $('#weekly-graph').click(function() {
-  $('#advanced-user-interactions>svg').remove();
-  plotGraph('weekly');
+  $('#advanced-user-interactions-weekly').show();
+  $('#advanced-user-interactions-daily').hide();
 });
 
-plotGraph('daily');
