@@ -115,8 +115,6 @@ $('#advanced-user-interactions-weekly').hide();
 plotGraph('daily');
 plotGraph('weekly');
 
-// TODO (Sam) - don't delete and create all brand new elements
-// Instead use d3 to delete some and update others
 $('#daily-graph').click(function() {
   $('#advanced-user-interactions-daily').show();
   $('#advanced-user-interactions-weekly').hide();
