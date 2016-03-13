@@ -10,7 +10,9 @@ body {
 }
 
 svg {
-  background: #eeb;
+  background: #fff;
+  padding: 10px;
+  margin: 20px;
 }
 
 path {
@@ -25,6 +27,11 @@ path {
   font: 14px sans-serif;
 }
 
+.graph-holder {
+  height: 300px;
+  margin: 95px 20px 20px 20px;
+}
+
 .axis line,
 .axis path {
   fill: none;
@@ -33,7 +40,21 @@ path {
 }
 
 .axis--x path {
-  display: none;
+  /*display: none;*/
+}
+
+.axis--x .tick line,
+.axis--x path {
+  stroke: none;
+}
+
+.axis--y .tick line {
+  stroke: #ccc;
+}
+
+.uk-average {
+  stroke: #406;
+  stroke-width: 2;
 }
 
 .tick line {
@@ -52,3 +73,7 @@ path {
   padding: 16px 31px;
   margin-right: 10px;
 }
+
+
+
+

@@ -54,6 +54,8 @@ function plotGraph(timeStep) {
   d3.csv(timeStep + "-gbp.csv", type, function(error, crimea) {
     if (error) throw error;
 
+    debugger
+
     var layers = d3.layout.stack()(causes.map(function(c) {
       return crimea.map(function(d) {
         return { x: d.date, y: d[c] };
